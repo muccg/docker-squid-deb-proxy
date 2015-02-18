@@ -13,6 +13,7 @@ RUN env --unset=DEBIAN_FRONTEND
 
 # Extra locations to cache from
 ADD extra-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/20-extra-sources.acl
+ADD debian-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/30-debian-sources.acl
 
 # Cache RPM
 RUN echo 'refresh_pattern rpm$   129600 100% 129600' >> \ 
