@@ -21,3 +21,4 @@ download.rethinkdb.com                  # RethinkDB
 download.opensuse.org                   # OpenSuse Build Service
 packages.elasticsearch.org              # ElasticSearch
 archive.ubuntu.com
+ubuntu-cloud.archive.canonical.com
