@@ -16,6 +16,7 @@ ADD extra-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/20-extra-sourc
 ADD debian-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/30-debian-sources.acl
 ADD centos-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/40-centos-sources.acl
 ADD fedora-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/50-fedora-sources.acl
+ADD ius-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/60-ius-sources.acl
 
 # Cache RPM
 RUN echo 'refresh_pattern rpm$   129600 100% 129600' >> \ 
