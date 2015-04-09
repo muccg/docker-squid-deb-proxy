@@ -17,8 +17,8 @@ ADD debian-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/30-debian-sou
 ADD centos-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/40-centos-sources.acl
 ADD fedora-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/50-fedora-sources.acl
 ADD ius-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/60-ius-sources.acl
-ADD ius-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/61-postgresql-sources.acl
-ADD ius-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/62-puppetlabs-sources.acl
+ADD postgresql-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/61-postgresql-sources.acl
+ADD puppetlabs-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/62-puppetlabs-sources.acl
 ADD ccg-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/70-ccg-sources.acl
 
 # Cache RPM
