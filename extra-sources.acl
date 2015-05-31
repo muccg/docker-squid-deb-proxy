@@ -25,3 +25,4 @@ archive.ubuntu.com
 ubuntu-cloud.archive.canonical.com
 security.ubuntu.com
 www.rabbitmq.com                        # RabbitMQ
+ceph.com                                # Ceph
