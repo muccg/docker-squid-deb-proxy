@@ -1,6 +1,6 @@
 #
 FROM muccg/debian8-base
-MAINTAINER ccg <devops@ccg.murdoch.edu.au>
+MAINTAINER https://github.com/muccg
 
 ENV DEBIAN_FRONTEND noninteractive
 
