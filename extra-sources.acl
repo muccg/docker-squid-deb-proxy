@@ -21,6 +21,7 @@ deb.torproject.org                      # Tor
 download.rethinkdb.com                  # RethinkDB
 download.opensuse.org                   # OpenSuse Build Service
 packages.elasticsearch.org              # ElasticSearch
+extras.ubuntu.com
 archive.ubuntu.com
 ubuntu-cloud.archive.canonical.com
 security.ubuntu.com
