@@ -25,6 +25,7 @@ extras.ubuntu.com
 archive.ubuntu.com
 ubuntu-cloud.archive.canonical.com
 nova.clouds.archive.ubuntu.com
+au.archive.ubuntu.com
 security.ubuntu.com
 www.rabbitmq.com                        # RabbitMQ
 ceph.com                                # Ceph
