@@ -27,6 +27,7 @@ ubuntu-cloud.archive.canonical.com
 nova.clouds.archive.ubuntu.com
 au.archive.ubuntu.com
 security.ubuntu.com
+changelogs.ubuntu.com
 www.rabbitmq.com                        # RabbitMQ
 ceph.com                                # Ceph
 nginx.org                               # nginx
