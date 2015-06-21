@@ -9,7 +9,6 @@ github.com                              # Github http checkout
 get.docker.io                           # Docker
 get.docker.com                          # Docker
 dl.dropboxusercontent.com               # Dropbox URI
-cloud-images.ubuntu.com                 # Base vboxes
 puppet-vagrant-boxes.puppetlabs.com     # Beaker/Puppet vboxes
 www.openprinting.org                    # Printer drivers (ubuntu extras)
 linux.dropbox.com                       # Dropbox
