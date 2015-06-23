@@ -25,6 +25,14 @@ ADD ccg-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/70-ccg-sources.a
 RUN echo 'refresh_pattern rpm$   129600 100% 129600' >> \
   /etc/squid-deb-proxy/squid-deb-proxy.conf
 
+# Don't cache our repos
+RUN echo 'acl ccg dstdomain .ccgapps.com.au' >> \
+  /etc/squid-deb-proxy/squid-deb-proxy.conf
+RUN echo 'acl ccg dstdomain .murdoch.edu.au' >> \
+  /etc/squid-deb-proxy/squid-deb-proxy.conf
+RUN echo 'cache deny ccg' >> \
+  /etc/squid-deb-proxy/squid-deb-proxy.conf
+
 # Point cache directory to /data
 RUN ln -sf /data /var/cache/squid-deb-proxy
 
