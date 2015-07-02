@@ -25,4 +25,4 @@ packages.elasticsearch.org              # ElasticSearch
 www.rabbitmq.com                        # RabbitMQ
 ceph.com                                # Ceph
 nginx.org                               # nginx
-index.docker.io                         # Use as a proxy for docker daemon
+.docker.io                              # Use as a proxy for docker daemon
