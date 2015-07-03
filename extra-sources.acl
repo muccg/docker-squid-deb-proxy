@@ -6,7 +6,6 @@ releases.ansible.com                    # Ansible
 dl.google.com                           # Google repositories
 raw.githubusercontent.com               # Static files from github
 github.com                              # Github http checkout
-get.docker.io                           # Docker
 get.docker.com                          # Docker
 dl.dropboxusercontent.com               # Dropbox URI
 puppet-vagrant-boxes.puppetlabs.com     # Beaker/Puppet vboxes
