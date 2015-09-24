@@ -27,3 +27,4 @@ nginx.org                               # nginx
 .docker.io                              # Use as a proxy for docker daemon
 cran.r-project.org                      # It's R
 debian-r.debian.net                     # I heard you like R
+debian.sur5r.net                        # i3
