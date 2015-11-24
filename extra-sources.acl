@@ -25,6 +25,7 @@ www.rabbitmq.com                        # RabbitMQ
 ceph.com                                # Ceph
 nginx.org                               # nginx
 .docker.io                              # Use as a proxy for docker daemon
+.dockerproject.org                      # Another source of docker debs
 cran.r-project.org                      # It's R
 debian-r.debian.net                     # I heard you like R
 debian.sur5r.net                        # i3
