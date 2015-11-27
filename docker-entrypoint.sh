@@ -8,8 +8,7 @@ if [ "$1" = 'squid' ]; then
     . /usr/share/squid-deb-proxy/init-common.sh
     pre_start
     post_start
-    /usr/sbin/squid3 -N -f /etc/squid-deb-proxy/squid-deb-proxy.conf
-    exit $?
+    exec /usr/sbin/squid3 -N -f /etc/squid-deb-proxy/squid-deb-proxy.conf
 fi
 
 exec "$@"
