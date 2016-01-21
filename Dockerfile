@@ -2,6 +2,7 @@
 FROM muccg/debian8-base
 MAINTAINER https://github.com/muccg
 
+ENV USE_ACL=1
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \

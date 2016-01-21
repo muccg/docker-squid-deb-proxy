@@ -8,6 +8,12 @@ if [ "$1" = 'squid' ]; then
     . /usr/share/squid-deb-proxy/init-common.sh
     pre_start
     post_start
+
+    if [ "$USE_ACL" != "1" ]; then
+	echo "[WARN] Not mirror acl active"
+	sed -i '/to_archive_mirrors/c\# No mirror acl active.' /etc/squid-deb-proxy/squid-deb-proxy.conf
+    fi
+
     exec /usr/sbin/squid3 -N -f /etc/squid-deb-proxy/squid-deb-proxy.conf
 fi
 
