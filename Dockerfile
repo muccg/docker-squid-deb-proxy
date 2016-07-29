@@ -1,26 +1,22 @@
 #
-FROM muccg/debian8-base
+FROM buildpack-deps:jessie-curl
 MAINTAINER https://github.com/muccg
 
 ENV USE_ACL=1
+ENV USE_AVAHI=0
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+  avahi-utils \
+  avahi-daemon \
   squid-deb-proxy \
   squid-deb-proxy-client \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN env --unset=DEBIAN_FRONTEND
 
-# Extra locations to cache from
-ADD extra-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/20-extra-sources.acl
-ADD debian-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/30-debian-sources.acl
-ADD centos-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/40-centos-sources.acl
-ADD fedora-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/50-fedora-sources.acl
-ADD ius-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/60-ius-sources.acl
-ADD postgresql-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/61-postgresql-sources.acl
-ADD puppetlabs-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/62-puppetlabs-sources.acl
-ADD ccg-sources.acl /etc/squid-deb-proxy/mirror-dstdomain.acl.d/70-ccg-sources.acl
+# ACL config
+ADD etc /etc
 
 # Cache RPM
 RUN echo 'refresh_pattern rpm$   129600 100% 129600' >> \
@@ -47,7 +43,7 @@ RUN chmod +x /docker-entrypoint.sh
 
 VOLUME ["/data"]
 
-EXPOSE 8000
+EXPOSE 8000 5353/udp
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["squid"]
