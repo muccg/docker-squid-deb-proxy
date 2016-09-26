@@ -1,10 +1,11 @@
 #!groovy
 
 node {
-    stage 'Checkout'
+    stage('Checkout') {
         checkout scm
+    }
 
-    stage 'Build'
+    stage('Build') {
         echo "Branch is: ${env.BRANCH_NAME}"
         echo "Build is: ${env.BUILD_NUMBER}"
         env.DOCKER_USE_HUB = 1
@@ -15,4 +16,5 @@ node {
                 sh './build.sh'
             }
         }
+    }
 }
