@@ -2,9 +2,7 @@ version: '2'
 services:
 
   squid-deb-proxy:
-    build:
-      context: ./
-    image: muccg/squid-deb-proxy
+    image: muccg/squid-deb-proxy:latest
     volumes:
       - ./data:/data
     ports:
