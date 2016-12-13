@@ -13,6 +13,7 @@ www.openprinting.org                    # Printer drivers (ubuntu extras)
 linux.dropbox.com                       # Dropbox
 deb.opera.com                           # Opera
 downloads-distro.mongodb.org            # MongoHQ
+repo.mongodb.org
 repository.spotify.com                  # Spotify
 repo.steampowered.com                   # Steam
 deb.torproject.org                      # Tor
