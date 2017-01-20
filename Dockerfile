@@ -1,5 +1,5 @@
 #
-FROM buildpack-deps:jessie-curl
+FROM debian:jessie-slim
 MAINTAINER https://github.com/muccg/
 
 ENV USE_ACL=1
@@ -15,12 +15,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN env --unset=DEBIAN_FRONTEND
 
-# ACL config
+# Add ACLs
 ADD etc /etc
 
-# Cache RPM
-RUN echo 'refresh_pattern rpm$   129600 100% 129600' >> \
-  /etc/squid-deb-proxy/squid-deb-proxy.conf
+# Additional config, mount over this at runtime to override 
+RUN echo \
+'refresh_pattern rpm$   129600 100% 129600\n\
+shutdown_lifetime 1 second\n\
+pipeline_prefetch on\n\
+icp_port 0\n\
+htcp_port 0\n\
+icp_access deny all\n\
+htcp_access deny all\n\
+snmp_port 0\n\
+snmp_access deny all\n'\
+    >> /etc/squid-deb-proxy/squid-deb-proxy.conf
+
 
 # Point cache directory to /data
 RUN ln -sf /data /var/cache/squid-deb-proxy
