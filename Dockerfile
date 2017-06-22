@@ -1,5 +1,5 @@
 #
-FROM debian:jessie-slim
+FROM debian:stretch-slim
 MAINTAINER https://github.com/muccg/
 
 ENV USE_ACL=1
